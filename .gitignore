@@ -1,0 +1,114 @@
+# ------------------------------
+# Environment files
+# ------------------------------
+.env
+.env.local
+.env.*.local
+
+# ------------------------------
+# Python
+# ------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ------------------------------
+# Test / coverage / type-checking
+# ------------------------------
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+
+# ------------------------------
+# Jupyter / notebooks
+# ------------------------------
+.ipynb_checkpoints/
+
+# ------------------------------
+# Virtual environments
+# ------------------------------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------
+# IDE / editor
+# ------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------------------
+# OS files
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Logs / temp
+# ------------------------------
+*.log
+logs/
+tmp/
+temp/
+
+# ------------------------------
+# Secrets / credentials
+# ------------------------------
+*.pem
+*.key
+*.crt
+secrets/
+
+# ------------------------------
+# Local runtime / generated artifacts
+# ------------------------------
+outputs/
+checkpoints/
+datasets/
+models/
+artifacts/
+workspace/.cache/
+workspace/**/.cache/
+workspace/**/__pycache__/
+workspace/**/.pytest_cache/
+workspace/**/.mypy_cache/
+
+# ------------------------------
+# Optional: ignore vendored WHAM source
+# Uncomment this if you do NOT want to commit workspace/WHAM
+# ------------------------------
+# workspace/WHAM/

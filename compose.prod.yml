@@ -1,0 +1,11 @@
+services:
+  wham:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: prod
+      args:
+        PYTHON_VERSION: ${PYTHON_VERSION}
+    image: ${IMAGE_NAME}:prod
+    working_dir: ${CONTAINER_WHAM_DIR}
+    restart: ${RESTART_POLICY}

@@ -1,0 +1,63 @@
+# VCS
+.git
+.gitignore
+
+# Python cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Notebook cache
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+logs/
+tmp/
+temp/
+
+# Environment / secrets
+.env.*
+!.env
+!.env.example
+*.pem
+*.key
+*.crt
+secrets/
+.envrc
+
+# Local virtual environments
+.venv/
+venv/
+
+# Build / cache artifacts
+build/
+dist/
+.cache/
+
+# Runtime markers
+**/.deps_installed
+
+# Large local assets you usually do not want in build context
+datasets/
+outputs/
+checkpoints/
+models/
+
+# Keep required files in the build context
+!Dockerfile
+!compose.yml
+!compose.dev.yml
+!compose.prod.yml
+!entrypoint.dev.sh
+!entrypoint.prod.sh
+!workspace/
+!workspace/WHAM/

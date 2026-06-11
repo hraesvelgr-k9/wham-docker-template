@@ -1,0 +1,35 @@
+services:
+  wham:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+      args:
+        PYTHON_VERSION: ${PYTHON_VERSION}
+    image: ${IMAGE_NAME}:${IMAGE_TAG}
+    volumes:
+      # Bind-mount the host-side WHAM source tree for active development
+      - type: bind
+        source: ${HOST_WHAM_DIR}
+        target: ${CONTAINER_WHAM_DIR}
+
+      # Cache conda packages across container rebuilds
+      - type: volume
+        source: conda_pkgs
+        target: /opt/conda/pkgs
+
+      # Cache pip downloads across container rebuilds
+      - type: volume
+        source: pip_cache
+        target: /root/.cache/pip
+
+      # Store bootstrap state so first-time setup is not repeated unnecessarily
+      - type: volume
+        source: wham_state
+        target: /var/lib/wham
+    working_dir: ${CONTAINER_WHAM_DIR}
+
+volumes:
+  conda_pkgs:
+  pip_cache:
+  wham_state:
